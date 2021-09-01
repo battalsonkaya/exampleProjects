@@ -1,0 +1,695 @@
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+    label.placeholder {
+        background: #fff;
+        position: absolute;
+        top: -10px;
+        left: 30px;
+        color: $gray-text-color;
+        font-size: 1.4rem;
+    }
+    input.placeholder-active {
+        @include placeholder{
+           opacity: 0 !important;
+        }
+    }
+    &-title {
+        font-weight: 600;
+        margin-bottom: 1.6rem;
+        @include max($sm) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.form-input-group {
+    position: relative;
+    &-label {
+        position: absolute;
+        height: calc(100% - 2px);
+        background: #fff;
+        z-index: 4;
+        right: 2rem;
+        top: 1px;
+        @include center;
+    }
+}
+
+.form-qty-group {
+    position: relative;
+    .qty-group {
+        display: flex;
+        width: 11.5rem;
+        height: calc(100% - 10px);
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        > a {
+            @include center;
+            flex: 0 0 5.5rem;
+            height: 100%;
+            background: $gray-color;
+            color: $text-color;
+
+            &[data-selector="qty-minus"] {
+                margin-right: 5px;
+                border-radius: 5px 0 0 5px;
+            }
+            &[data-selector="qty-plus"] {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+}
+
+.form-control {
+    color: $text-color;
+    border: solid 1px $border-color;
+    border-radius: $radius-base;
+    height: 6rem;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.3rem 2rem 1rem;
+    &:focus {
+        box-shadow: none;
+        border-color: $border-color;
+        @include placeholder{
+            opacity: 0;
+        }
+    }
+    @include placeholder{
+        color: $text-color;
+        opacity: 1;
+        transition: $transition-base;
+    }
+    &.b-select {
+        background: url("../img/icon/icon-select.svg") no-repeat center right 1.5rem;
+        appearance: none;
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    &.form-control-sm {
+        height: 4rem;
+        padding: .7rem 1.5rem;
+        font-size: 1.3rem;
+    }
+    &.parsley-error {
+        border-color: red;
+    }
+    &:disabled,
+    &[readonly] {
+        background-color: $gray-color;
+        opacity: 1;
+    }
+    &.form-control-textarea {
+        height: auto;
+    }
+    @include max($sm) {
+        font-size: 1.3rem;
+        height: 4.5rem;
+        padding: .7rem 2rem;
+    }
+}
+
+.help-block {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    &:empty {
+        display: none;
+    }
+}
+
+.b-button-groups {
+    display: flex;
+    > * {
+        margin-right: 2rem;
+        flex: auto;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+	border-radius: $radius-base;
+    transition: $transition-base;
+    border: none;
+    height: 6rem;
+    width: 100%;
+    padding: 0 2.2rem;
+    border-radius: $radius-base;
+    @include center;
+    @include max($sm) {
+        font-size: 1.4rem;
+        height: 4.5rem;
+    }
+    &:active,
+    &:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    &.b-btn {
+        &-primary {
+            color: $primary-text-color;
+            background: $primary-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $primary-hover-color;
+                color: $primary-text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $primary-hover-color;
+                color: $primary-text-color;
+                box-shadow: none;
+            }
+        }
+        &-gray {
+            color: $text-color;
+            background: $gray-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $gray-hover-color;
+                color: $text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $gray-hover-color;
+                color: $text-color;
+                box-shadow: none;
+            }
+        }
+        &-secondary {
+            color: $primary-text-color;
+            background: $secondary-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $secondary-hover-color;
+                color: $primary-text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $secondary-hover-color;
+                color: $primary-text-color;
+                box-shadow: none;
+            }
+        }
+        &-third {
+            color: $primary-text-color;
+            background: $third-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $third-hover-color;
+                color: $primary-text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $third-hover-color;
+                color: $primary-text-color;
+                box-shadow: none;
+            }
+        }
+        &-bg-text {
+            color: $primary-text-color;
+            background: $text-color-2;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $text-color;
+                color: $primary-text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $text-color;
+                color: $primary-text-color;
+                box-shadow: none;
+            }
+        }
+        &-solid-third {
+            color: $third-color;
+            background: transparent;
+            border: solid 1px $third-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $third-color;
+                color: $primary-text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $third-color;
+                color: $primary-text-color;
+                box-shadow: none;
+            }
+        }
+        &-solid-gray {
+            color: $text-color-2;
+            background: transparent;
+            border: solid 1px $border-color;
+            &:not(.btn-loading):active,
+            &:not(.btn-loading).active,
+            &:not(.btn-loading):hover,
+            &:not(.btn-loading).hover,
+            &:not([disabled]):not(.disabled):active,
+            &:not([disabled]):not(.disabled).active {
+                background: $border-color;
+                color: $text-color;
+            }
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active {
+                background: $border-color;
+                color: $text-color;
+                box-shadow: none;
+            }
+        }
+        &-sm {
+            display: inline-flex;
+            width: auto;
+            padding: 0 7rem;
+            font-weight: 600;
+            @include max($sm) {
+                padding: 0 2rem;
+                font-size: 1.4rem;
+            }
+
+        }
+        &-xs {
+            display: inline-flex;
+            width: auto;
+            min-width: 16rem;
+            height: 5rem;
+            padding: 0 3rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            @include max($sm) {
+                padding: 0 2rem;
+                font-size: 1.4rem;
+            }
+        }
+        &-rds-sm {
+            border-radius: $radius-base;
+        }
+        &-rds-xxs {
+            width: 6rem;
+            height: 3.6rem;
+            font-size: 1.4rem;
+            border-radius: 5rem;
+            padding: 1rem !important;
+        }
+    }
+}
+
+.b-btn-link {
+    display: block;
+    text-decoration: underline;
+    color: $primary-color;
+    font-size: 2rem;
+    transition: $transition-base;
+    @include max($sm) {
+        font-size: 1.4rem;
+    }
+    &:hover {
+        color: $primary-hover-color;
+    }
+}
+
+.b-text-color {
+    color: $text-color;
+}
+
+.btn-loading.loading-active:not(.disabled) {
+    text-indent: -9999em;
+    font-size: 0 !important;
+    position: relative;
+    &:before {
+        content: url("../img/icon/btn-load.svg");
+    }
+}
+
+.b-btn-button-group {
+    display: flex;
+    > button {
+        margin-right: $gutter;
+        flex: 0 0 32%;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.b-file-upload {
+    position: relative;
+    width: 100%;
+    height: 6rem;
+    
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(236, 237, 243, 0.3);
+      padding: 1.5rem;
+      display: block;
+      width: 100%;
+      pointer-events: none;
+      z-index: 20;
+      border-radius: $radius-base;
+      font-weight: 500;
+      border: dashed 1px #DCDDE5;
+    }
+    
+    &:before {
+      content: '';
+      background: url("../img/icon/icon-upload.svg") no-repeat center;
+      height: 1.8rem;
+      width: 5rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      margin: 0;
+      padding: 0;
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.form-check-input {
+    height: 2.4rem;
+    width: 2.4rem;
+    cursor: pointer;
+}
+
+.form-switch {
+    padding-left: 0;
+    display: flex;
+    label {
+        padding-right: 1.6rem;
+        font-weight: 600;
+    }
+    .form-check-input {
+        width: 4.6rem;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+input[type=checkbox],
+input[type=radio] {
+    transition: $transition-base !important;
+}
+
+.form-check.b-form-element {
+    .form-check-label {
+        font-weight: 500;
+    }
+    .form-check-input {
+        &[type=checkbox],
+        &[type=radio] {
+            margin-right: 1rem;
+            border-radius: 5px;
+            &:checked {
+                background: $primary-color url("../img/icon/icon-check.svg") no-repeat center;
+            }
+        }
+    }
+    &.form-check-inline {
+        margin-right: 3rem;
+        margin-bottom: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+hr {
+    background-color: $border-color;
+}
+
+.parsley-errors-list {
+    margin-top: 1rem;
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.b-modal {
+    .modal-dialog {
+        max-width: 46rem;
+        .modal-content {
+            border-radius: $radius-base;
+            border: none;
+            .modal-header {
+                padding: 2rem 3rem;
+                .modal-title {
+                    font-size: 2rem;
+                }
+            }
+            .modal-body {
+                padding: 3.5rem 3rem;
+            }
+            .modal-footer {
+                padding: 1.5rem 3rem;
+            }
+            @include max($sm) {
+                .modal-header {
+                    padding: 1.5rem 1rem;
+                    .modal-title {
+                        font-size: 1.7rem;
+                    }
+                }
+                .modal-body {
+                    padding: 2rem 1rem;
+                }
+                .modal-footer {
+                    padding: 1.5rem 1rem;
+                }
+            }
+        }
+    }
+    &-success {
+        .modal-body {
+            .icon-success {
+                position: relative;
+                width: 8.5rem;
+                margin: 0 auto 3rem;
+            }
+            .mdl-text {
+                text-align: center;
+                margin-bottom: 5rem;
+                .mdl-title {
+                    font-size: 2.6rem;
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                    @include max($sm) {
+                        font-size: 2rem;
+                    }
+                }
+                .mdl-desc {
+                    color: $text-color-2;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+p {
+    color: $text-color;
+    line-height: 2.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    @include max($sm) {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $text-color;
+    font-weight: 700;
+    line-height: normal;
+    small,
+    .small {
+        display: block;
+        font-weight: 400;
+        color: $text-color;
+        padding-top: 1.4rem;
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    margin-bottom: $gutter + 5px;
+  small,
+  .small {
+    font-size: 1.8rem;
+  }
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-bottom: $gutter + 5px;
+    small,
+    .small {
+        font-size: 1.2rem;
+    }
+}
+
+h1, .h1 { 
+    font-size: 4.8rem;
+    @include max($sm) {
+        font-size: 2.8rem;
+    }
+}
+
+h2, .h2 { 
+    font-size: 4rem;
+    @include max($sm) {
+        font-size: 2.4rem;
+    }
+    &.h2-sm {
+        font-size: 3.4rem;
+        @include max($sm) {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+h3, .h3 { 
+    font-size: 3.2rem;
+    @include max($sm) {
+        font-size: 1.6rem;
+    }
+}
+h4, .h4 { 
+    font-size: 2.4rem;
+    @include max($sm) {
+        font-size: 1.6rem;;
+    }
+}
+h5, .h5 { 
+    font-size: 1.6rem;
+}
+h6, .h6 { 
+    font-size: 1.2rem;
+}
+
+[data-toggle="tooltip"] {
+    cursor: pointer;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip .arrow {
+    display: none !important;
+}
+
+.tooltip-inner {
+    max-width: 300px;
+    padding: 1rem;
+    color: $text-color;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 16px rgba($color: #000000, $alpha: 0.16);
+}
+
+/* @Breadcrumbs */
+#breadcrumb {
+    color: rgba($color: $text-color-2, $alpha: 0.5);
+    font-size: 1.4rem;
+    font-weight: 500;
+	@include max($md) {
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		padding: 0 0 1rem;
+	}
+	ol {
+		display: flex;
+        align-items: center;
+		padding: 0;
+		margin: 0;
+        list-style: none;
+		li {
+			&:after {
+                content: '-';
+                padding: 0 .6rem;
+            }
+			a {
+				color: rgba($color: $text-color-2, $alpha: 0.5);
+                transition: $transition-base;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+			@include max($sm) {
+				font-size: 1.3rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name='description' content="Description" />
+    <meta name='keywords' content="Key1, key2, key3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, minimal-ui"/>
+	<meta name="theme-color" content="#4253FF">
+    <title>@@pageTitle</title>
+    @@include('./style.html')
+</head>
+<body class="@@bodyClass">
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto d-lg-none">
+                    <a href="javascript:void(0);" aria-label="Navigation" class="openbox mobile-navigation-bar" data-target="sidebar" data-mode="custom">
+                        <i class="far fa-bars"></i>
+                    </a>
+                </div>
+                <div class="col col-lg-auto">
+                    <div class="logo">
+                        <a href="./index.html" aria-label="Logo">
+                            <img src="assets/img/logo/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <div class="search">
+                        <form action="#" method="get">
+                            <div class="search-content">
+                                <input type="text" placeholder="Ne aramıştınız?">
+                                <button type="button"><img src="assets/img/icon/icon-search.svg" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col col-md-auto">
+                    <div class="user-header-menu">
+                        <div class="currency-carousel">
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-dollar-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">USD</div>
+                                    <div class="v">8.1460</div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-euro-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">EUR</div>
+                                    <div class="v">9.1460</div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-pound-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">GBP</div>
+                                    <div class="v">10.1460</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ethernet-control">
+                            <a href="javascript:void(0)" class="disconnected">
+                                <i><img src="assets/img/icon/icon-ethernet.svg" alt=""></i>
+                            </a>
+                        </div>
+                        <div class="notification-menu">
+                            <a href="javascript:void(0);" class="openbox" data-target="notification-menu-content" data-mode="custom" data-overlay="true">
+                                <i><img src="assets/img/icon/icon-notifiication.svg" alt=""></i>
+                                <div class="notification-qty">2</div>
+                            </a>
+                            <div class="notification-menu-content openbox-content">
+                                <div class="ntf-title">
+                                    Bildirimler
+                                </div>
+                                <div class="ntf-list">
+                                    <div class="ntf-list-title">Okunmamış</div>
+                                    <div class="ntf-list-content">
+                                        <div class="ntf-item">
+                                            <i><img src="assets/img/icon/ntf/icon-invoice.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                        <div class="ntf-item">
+                                            <i><img src="assets/img/icon/ntf/icon-money.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                    </div>
+                                    <div class="ntf-list-title">Okunmuş</div>
+                                    <div class="ntf-list-content">
+                                        <div class="ntf-item ntf-read">
+                                            <i><img src="assets/img/icon/ntf/icon-fiche.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                        <div class="ntf-item ntf-read">
+                                            <i><img src="assets/img/icon/ntf/icon-money.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-menu">
+                            <a href="javascript:void(0);" class="openbox" data-target="quick-menu-content" data-mode="custom" data-overlay="true">
+                                <i><img src="assets/img/icon/icon-plus-white.svg" alt=""></i>
+                                <span>Hızlı İşlem</span>
+                            </a>
+                            <div class="quick-menu-content openbox-content">
+                                <div class="quick-menu-list">
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-invoice.svg" alt=""></i>
+                                        <span>Fatura oluştur</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-irsaliye.svg" alt=""></i>
+                                        <span>İrsaliye oluştur</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-support.svg" alt=""></i>
+                                        <span>Destek iste</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-notes.svg" alt=""></i>
+                                        <span>Müşteriye not al</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-credit.svg" alt=""></i>
+                                        <span>Kontör-Modül Yedekleme alanı</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-play.svg" alt=""></i>
+                                        <span>Nasıl çalışır</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<main>

@@ -1,0 +1,200 @@
+@@include('./template/header.html', {
+    "pageTitle": "Biyolla Panel",
+    "bodyClass": "home-page"
+})
+
+<div class="container-fluid">
+    <div class="row">
+
+        @@include('./template/sidebar.html')
+
+        <div class="col-lg-9 ps-lg-0">
+            <div class="main-container">
+                <div class="main-header">
+                    <div class="title">
+                        Hoşgeldin, Uğur. Biyolla’da tüm işlemlerini hızlıca halledebilirsin.
+                        <span class="date">29 Eylül Cuma</span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="quick-sts">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="quick-sts-item">
+                                            <i><img src="assets/img/icon/icon-invoice.svg" alt=""></i>
+                                            <div class="quick-sts-text">
+                                                <div class="t">Toplam fatura tutarı</div>
+                                                <div class="v">360.980 TL</div>
+                                            </div>
+                                            <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                <img src="assets/img/icon/icon-question.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="quick-sts-item">
+                                            <i><img src="assets/img/icon/icon-money.svg" alt=""></i>
+                                            <div class="quick-sts-text">
+                                                <div class="t">Toplam tahsilat</div>
+                                                <div class="v">444.360.980 TL</div>
+                                            </div>
+                                            <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                <img src="assets/img/icon/icon-question.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="quick-sts-item">
+                                            <i><img src="assets/img/icon/icon-fiche.svg" alt=""></i>
+                                            <div class="quick-sts-text">
+                                                <div class="t">Toplam irsaliye</div>
+                                                <div class="v">180</div>
+                                            </div>
+                                            <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                <img src="assets/img/icon/icon-question.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="campaign-slider">
+                                <div class="slider-banner">
+                                    <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                </div>
+                                <div class="slider-banner">
+                                    <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                </div>
+                                <div class="slider-banner">
+                                    <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="call-to-action-1">
+                                <div class="cta-icon">
+                                    <i><img src="assets/img/icon/icon-hand-notes.svg" alt=""></i>
+                                </div>
+                                <div class="cta-text">
+                                    <div class="t">Hesabını güncelle!</div>
+                                    <div class="v">Daha fazla modüle sahip olabilirsin ya da kontör satın alabilirsin.</div>
+                                </div>
+                                <div class="cta-button">
+                                    <a href="#" class="btn b-btn b-btn-primary b-btn-xs">Yeni modül ekle</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="module-box buying-modules">
+                                <div class="box-title">
+                                    <span>Satın aldığınız modüller</span>
+                                    <a href="#">Tümü</a>
+                                </div>
+                                <div class="buying-modules-list">
+                                    <div class="item">
+                                        <figure class="icon">
+                                            <img src="assets/img/icon/icon-fatura.svg" alt="">
+                                        </figure>
+                                        <div class="title">E-Fatura</div>
+                                        <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                    </div>
+                                    <div class="item">
+                                        <figure class="icon">
+                                            <img src="assets/img/icon/icon-kep.svg" alt="">
+                                        </figure>
+                                        <div class="title">E-Kep</div>
+                                        <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                    </div>
+                                    <div class="item">
+                                        <figure class="icon">
+                                            <img src="assets/img/icon/icon-irsaliye.svg" alt="">
+                                        </figure>
+                                        <div class="title">E-İrsaliye</div>
+                                        <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="module-box notes-modules">
+                                <div class="box-title">
+                                    <span>Notlar-Hatırlatma</span>
+                                    <a href="#">Tümü</a>
+                                </div>
+                                <div class="notes-modules-list">
+                                    <a href="#" class="btn b-btn b-btn-third add-note-button">
+                                        <i class="far fa-plus"></i>
+                                        <span>Not-Hatırlatma Ekle</span>
+                                    </a>
+                                    <div class="item">
+                                        <div class="text">
+                                            <div class="t">Ödeme Planlaması</div>
+                                            <div class="v">19 Eylül - Boyner Grup ödeme lorem ipsum sit dolor amet...</div>
+                                        </div>
+                                        <a href="#" class="btn b-btn b-btn-third b-btn-rds-xxs ms-auto">Aç</a>
+                                    </div>
+                                    <div class="item">
+                                        <div class="text">
+                                            <div class="t">Kesilecek Faturalar</div>
+                                            <div class="v">19 Eylül - Boyner Grup ödeme lorem ipsum sit dolor amet...</div>
+                                        </div>
+                                        <a href="#" class="btn b-btn b-btn-third b-btn-rds-xxs ms-auto">Aç</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="module-box statistics-modules">
+                                <div class="box-title">
+                                    <span>İstatistikler</span>
+                                    <a href="#">Tümü</a>
+                                </div>
+                                <div class="statistics-modules-list">
+                                    <script type="text/javascript">
+                                        google.charts.load('current', {packages: ['corechart', 'bar']});
+                                        google.charts.setOnLoadCallback(drawStacked);
+
+                                        function drawStacked() {
+                                            var data = google.visualization.arrayToDataTable([
+                                                ['Ayrıntı', 'E-Fatura', 'E-İrsaliye', 'E-Kep'],
+                                                ['', 1000, 400, 200],
+                                                ['', 1170, 460, 250],
+                                                ['', 660, 1120, 300]
+                                            ]);
+
+                                            var options = {
+                                                isStacked: true,
+                                                chartArea: { width: '100%' },
+                                                colors: [customTheme.config.color.primary, customTheme.config.color.primary_2, customTheme.config.color.third],
+                                                vAxis: {
+                                                    textPosition: 'none',
+                                                    gridlines: { count: 0 }
+                                                },
+                                                hAxis: {
+                                                    textPosition: 'none',
+                                                    gridlines: { count: 0}
+                                                },
+                                                legend: { position: 'bottom' }
+                                            };
+
+                                            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                                                chart.draw(data, options);
+                                            
+                                        }
+                                      </script>
+
+                                      <div id="chart_div"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./template/footer.html')

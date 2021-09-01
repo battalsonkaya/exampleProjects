@@ -1,0 +1,313 @@
+@@include('./template/header.html', {
+    "pageTitle": "Müşteri Güncelle",
+    "bodyClass": "customer-update-page"
+})
+
+<div class="container-fluid">
+    <div class="row">
+
+        @@include('./template/sidebar.html')
+
+        <div class="col-lg-9 ps-lg-0">
+            <div class="main-container">
+                <div class="main-header">
+                    <div class="title">
+                        Müşteri Güncelle
+                    </div>
+                    @@include('./template/breadcrumb.html')
+                </div>
+                <div class="main-content">
+                    <div class="multi-accordion-form">
+                        <div class="multi-accordion-form-header">
+                            <ul class="nav nav-pills nav-fill mb-lg-5 mb-4" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab">
+                                        <i>1</i>
+                                        <span>Genel Bilgiler</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab">
+                                        <i>2</i>
+                                        <span>Detaylı Bilgiler</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab">
+                                        <i>3</i>
+                                        <span>Yetkili Bilgiler</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                            <div class="b-button-groups mb-lg-5 mb-4">
+                                <a class="btn b-btn-bg-text b-btn-xs" href="#">
+                                    Cari Kartlar Listesi
+                                </a>
+                                <a class="btn b-btn-primary b-btn-xs" href="#">
+                                    Cariyi Güncelle
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                                <form action="#" method="post" class="parsley-validation parsley-validation-step"> 
+                                    <!--TODO parsley-validation-step classı eğer tab'da validasyon yapılacaksa kullanılmalı-->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="form-check form-switch">
+                                                    <label class="form-check-label" for="cariDurumu">Cari Durumu</label>
+                                                    <input class="form-check-input" type="checkbox" id="cariDurumu" checked>
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-4">
+                                            <div class="form-group">
+                                                <div class="form-group-title">Cari Türü</div>
+                                                <div class="form-check form-check-inline b-form-element">
+                                                    <input class="form-check-input" type="radio" name="cariTuru" id="alici" value="Alıcı" checked>
+                                                    <label class="form-check-label" for="alici">Alıcı</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline b-form-element">
+                                                    <input class="form-check-input" type="radio" name="cariTuru" id="satici" value="Satıcı">
+                                                    <label class="form-check-label" for="satici">Satıcı</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline b-form-element">
+                                                    <input class="form-check-input" type="radio" name="cariTuru" id="sevkKargoNakliye" value="Sevk/Kargo/Nakliye">
+                                                    <label class="form-check-label" for="sevkKargoNakliye">Sevk/Kargo/Nakliye</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="placeholder">Cari kodu</label>
+                                                <input type="text" name="cariKodu" class="form-control placeholder-active" placeholder="Cari kodu" value="123ABC">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="cariAdi" class="form-control" placeholder="Cari adı">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="vergiDairesi" class="form-control" placeholder="Vergi dairesi">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="tckn" class="form-control" placeholder="TC Kimlik no" data-parsley-type="number" data-parsley-trigger="change" data-parsley-minlength="11" data-parsley-maxlength="11" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select name="kategori" class="form-control b-select" required>
+                                                    <option selected disabled value="">Kategori</option>
+                                                    <option value="1">Lorem ipsum</option>
+                                                    <option value="2">Lorem ipsum 2</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="kategori" class="form-control b-select">
+                                                    <option selected disabled value="">Adres</option>
+                                                    <option value="1">Lorem ipsum</option>
+                                                    <option value="2">Lorem ipsum 2</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="il" class="form-control b-select js-city">
+                                                    <option selected disabled value="">Şehir</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="ilce" class="form-control b-select js-district" disabled>
+                                                    <option selected disabled value="">İlçe</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="ticariSicilNo" class="form-control" placeholder="Ticari sicil no" data-parsley-type="number">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="iban" class="form-control iban" placeholder="IBAN">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="form-group">
+                                                        <div class="form-input-group">
+                                                            <input type="text" name="acilisBakiyesi" class="form-control money" placeholder="Açılış Bakiyesi" data-parsley-type="number" data-parsley-trigger="change">
+                                                            <span class="form-input-group-label">TL</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <select name="borc" class="form-control b-select">
+                                                            <option value="1">Borcu var</option>
+                                                            <option value="2">Lorem ipsum 2</option>
+                                                            <option value="2">Lorem ipsum 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-auto ms-md-auto">
+                                                <div class="b-button-groups">
+                                                    <a href="./index.html" class="btn b-btn-solid-third b-btn-xs">İptal</a>
+                                                    <button type="button" class="btn b-btn-primary b-btn-xs btn-next">Güncelle</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                                <form action="#" method="post" class="parsley-validation parsley-validation-step"> 
+                                    <!--TODO parsley-validation-step classı eğer tab'da validasyon yapılacaksa kullanılmalı-->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="telefonNumarasi" class="form-control phone_tr" placeholder="Telefon numarası" data-parsley-trigger="change" data-parsley-minlength="12" data-parsley-maxlength="12">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="fax" class="form-control phone_tr" placeholder="FAX" data-parsley-trigger="change" data-parsley-minlength="12" data-parsley-maxlength="12">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="cepTelefonu" class="form-control phone_tr" placeholder="Cep telefonu" data-parsley-trigger="change" data-parsley-minlength="12" data-parsley-maxlength="12">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="ePosta" class="form-control" placeholder="E-posta" data-parsley-trigger="change">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control form-control-textarea" id="cariAciklamasi" placeholder="Cari Açıklaması" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="form-qty-group">
+                                                    <input type="text" name="iskonto" class="form-control" placeholder="İskonto %" data-parsley-trigger="change" data-parsley-type="number" data-parsley-minlength="0" data-parsley-maxlength="100">
+                                                    <div class="qty-group">
+                                                        <a href=":;" data-selector="qty-minus"><i class="fal fa-minus"></i></a>
+                                                        <a href=":;" data-selector="qty-plus"><i class="fal fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-qty-group">
+                                                    <input type="text" name="vadeGun" class="form-control" placeholder="Vade - Gün" data-parsley-trigger="change" data-parsley-type="number" data-parsley-minlength="0">
+                                                    <div class="qty-group">
+                                                        <a href=":;" data-selector="qty-minus"><i class="fal fa-minus"></i></a>
+                                                        <a href=":;" data-selector="qty-plus"><i class="fal fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="varsayilanFiyat" class="form-control b-select">
+                                                    <option disabled value="">Varsayılan fiyat</option>
+                                                    <option value="1">Lorem ipsum 1</option>
+                                                    <option value="2">Lorem ipsum 2</option>
+                                                </select>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-7 col-lg-9">
+                                                    <div class="form-group">
+                                                        <input type="text" name="riskLimiti" class="form-control money" placeholder="Risk limiti">
+                                                    </div>
+                                                </div>
+                                                <div class="col-5 col-lg-3">
+                                                    <div class="form-group">
+                                                        <select name="paraBirimi" class="form-control b-select">
+                                                            <option value="TL">TL</option>
+                                                            <option value="USD">USD</option>
+                                                            <option value="EUR">EUR</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control form-control-textarea" id="riskAciklamasi" placeholder="Risk açıklaması" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="b-file-upload" data-text="Cari Görseli Yükleyin">
+                                                    <input name="file-upload-field" type="file" class="file-upload-field">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-auto ms-md-auto">
+                                                <div class="b-button-groups">
+                                                    <a href="./index.html" class="btn b-btn-solid-third b-btn-xs">İptal</a>
+                                                    <button type="button" class="btn b-btn-primary b-btn-xs btn-next">Güncelle</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                                <form action="#" method="post" class="parsley-validation parsley-validation-step"> 
+                                    <!--TODO parsley-validation-step classı eğer tab'da validasyon yapılacaksa kullanılmalı-->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="yetkiliAdi" class="form-control" placeholder="Yetkili adı">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="yetkiliEposta" class="form-control" placeholder="Yetkili e-posta" data-parsley-trigger="change">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="yetkiliTelefonu" class="form-control phone_tr" placeholder="Yetkili telefonu" data-parsley-trigger="change" data-parsley-minlength="12" data-parsley-maxlength="12">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="yetkiliNotları" class="form-control" placeholder="Yetkili notları">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-lg-auto ms-md-auto">
+                                                <div class="b-button-groups">
+                                                    <a href="./index.html" class="btn b-btn-solid-third b-btn-xs">İptal</a>
+                                                    <button type="button" class="btn b-btn-primary b-btn-xs" data-toggle="modal" data-target="#successModal">Tamamla</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal b-modal b-modal-success fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <figure class="icon-success">
+                    <img src="assets/img/static/biyolla-scs-maskot.svg" alt="maskot">
+                </figure>
+                <div class="mdl-text">
+                    <div class="mdl-title">Müşteri Güncellendi!</div>
+                    <div class="mdl-desc">Müşteriniz sistemde başarıyla güncellendi. Müşteri listesinden görüntüleyebilirsiniz.</div>
+                </div>
+                <div class="mdl-buttons">
+                    <div class="b-button-groups">
+                        <a class="btn b-btn-solid-gray b-btn-xs" href="#">
+                            Müşteri Listesi
+                        </a>
+                        <a class="btn b-btn-primary b-btn-xs" href="./musteri-ekle.html">
+                            Yeni Müşteri Ekle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('./template/footer.html')

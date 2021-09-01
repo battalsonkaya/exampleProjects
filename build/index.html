@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='description' content="Description" />
+    <meta name='keywords' content="Key1, key2, key3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, minimal-ui" />
+    <meta name="theme-color" content="#4253FF">
+    <title>Biyolla Panel</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon.ico/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="assets/img/favicon.ico/ms-icon-144x144.png">
+
+    <link rel="stylesheet" href="assets/css/frameworks/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/frameworks/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/frameworks/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/frameworks/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body class="home-page">
+    <header id="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto d-lg-none">
+                    <a href="javascript:void(0);" aria-label="Navigation" class="openbox mobile-navigation-bar" data-target="sidebar" data-mode="custom">
+                        <i class="far fa-bars"></i>
+                    </a>
+                </div>
+                <div class="col col-lg-auto">
+                    <div class="logo">
+                        <a href="./index.html" aria-label="Logo">
+                            <img src="assets/img/logo/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <div class="search">
+                        <form action="#" method="get">
+                            <div class="search-content">
+                                <input type="text" placeholder="Ne aramıştınız?">
+                                <button type="button"><img src="assets/img/icon/icon-search.svg" alt=""></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col col-md-auto">
+                    <div class="user-header-menu">
+                        <div class="currency-carousel">
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-dollar-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">USD</div>
+                                    <div class="v">8.1460</div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-euro-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">EUR</div>
+                                    <div class="v">9.1460</div>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="currency-item">
+                                <i class="far fa-pound-sign"></i>
+                                <div class="currency-text">
+                                    <div class="t">GBP</div>
+                                    <div class="v">10.1460</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ethernet-control">
+                            <a href="javascript:void(0)" class="disconnected">
+                                <i><img src="assets/img/icon/icon-ethernet.svg" alt=""></i>
+                            </a>
+                        </div>
+                        <div class="notification-menu">
+                            <a href="javascript:void(0);" class="openbox" data-target="notification-menu-content" data-mode="custom" data-overlay="true">
+                                <i><img src="assets/img/icon/icon-notifiication.svg" alt=""></i>
+                                <div class="notification-qty">2</div>
+                            </a>
+                            <div class="notification-menu-content openbox-content">
+                                <div class="ntf-title">
+                                    Bildirimler
+                                </div>
+                                <div class="ntf-list">
+                                    <div class="ntf-list-title">Okunmamış</div>
+                                    <div class="ntf-list-content">
+                                        <div class="ntf-item">
+                                            <i><img src="assets/img/icon/ntf/icon-invoice.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                        <div class="ntf-item">
+                                            <i><img src="assets/img/icon/ntf/icon-money.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                    </div>
+                                    <div class="ntf-list-title">Okunmuş</div>
+                                    <div class="ntf-list-content">
+                                        <div class="ntf-item ntf-read">
+                                            <i><img src="assets/img/icon/ntf/icon-fiche.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                        <div class="ntf-item ntf-read">
+                                            <i><img src="assets/img/icon/ntf/icon-money.svg" alt=""></i>
+                                            <div class="t">Buraya bildirim başlığı gelecektir.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-menu">
+                            <a href="javascript:void(0);" class="openbox" data-target="quick-menu-content" data-mode="custom" data-overlay="true">
+                                <i><img src="assets/img/icon/icon-plus-white.svg" alt=""></i>
+                                <span>Hızlı İşlem</span>
+                            </a>
+                            <div class="quick-menu-content openbox-content">
+                                <div class="quick-menu-list">
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-invoice.svg" alt=""></i>
+                                        <span>Fatura oluştur</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-irsaliye.svg" alt=""></i>
+                                        <span>İrsaliye oluştur</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-support.svg" alt=""></i>
+                                        <span>Destek iste</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-notes.svg" alt=""></i>
+                                        <span>Müşteriye not al</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-credit.svg" alt=""></i>
+                                        <span>Kontör-Modül Yedekleme alanı</span>
+                                    </a>
+                                    <a href="#" class="quick-item">
+                                        <i><img src="assets/img/icon/quick/icon-play.svg" alt=""></i>
+                                        <span>Nasıl çalışır</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-lg-3 ps-0">
+                    <section class="sidebar">
+                        <nav class="side-navbar">
+                            <ul>
+                                <li class="nav-sub">
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-assistan.svg" alt=""></i>
+                                        <span>Bi'Asistan</span>
+                                    </a>
+                                    <ul class="nav-sub-list" style="display: none;">
+                                        <li><a href="#"><span>Menü 1</span></a></li>
+                                        <li><a href="#"><span>Menü 2</span></a></li>
+                                        <li><a href="#"><span>Menü 3</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-sub">
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-muhasebe.svg" alt=""></i>
+                                        <span>Ön Muhasebe</span>
+                                    </a>
+                                    <ul class="nav-sub-list" style="display: none;">
+                                        <li><a href="#"><span>Menü 1</span></a></li>
+                                        <li><a href="#"><span>Menü 2</span></a></li>
+                                        <li><a href="#"><span>Menü 3</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-yonetim.svg" alt=""></i>
+                                        <span>Genel Yönetim</span>
+                                        <div class="nav-qty">9</div>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-donusum.svg" alt=""></i>
+                                        <span>E-Dönüşüm</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-muhasebe.svg" alt=""></i>
+                                        <span>Bi'Finans</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-pazaryerleri.svg" alt=""></i>
+                                        <span>Pazaryerleri</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-raporlar.svg" alt=""></i>
+                                        <span>Raporlar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-pazar.svg" alt=""></i>
+                                        <span>Bi'Pazar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-ayarlar.svg" alt=""></i>
+                                        <span>Ayarlar</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i><img src="assets/img/icon/icon-nav-destek.svg" alt=""></i>
+                                        <span>Biyolla Destek</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="sidebar-footer">
+                            <div class="sidebar-user">
+                                <a href="./profilim.html" title="Profilime git">
+                                    <figure class="user-avatar">
+                                        <img src="assets/img/shared/users/ugur.png" alt="avatar">
+                                        <!--TODO : write "UK" is empty profile image-->
+                                    </figure>
+                                    <div class="user-name">
+                                        Uğur Kartal
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-button">
+                                <a href="javascript:void(0)" class="btn-lock-monitor locked">
+                                    <i><img src="assets/img/icon/icon-lock.svg" alt=""></i>
+                                    <span>Ekranı Kilitle</span>
+                                </a>
+                            </div>
+                            <div class="sidebar-copyright">
+                                ©2021 Biyolla. Tüm hakları saklıdır.
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-lg-9 ps-lg-0">
+                    <div class="main-container">
+                        <div class="main-header">
+                            <div class="title">
+                                Hoşgeldin, Uğur. Biyolla’da tüm işlemlerini hızlıca halledebilirsin.
+                                <span class="date">29 Eylül Cuma</span>
+                            </div>
+                        </div>
+                        <div class="main-content">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="quick-sts">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="quick-sts-item">
+                                                    <i><img src="assets/img/icon/icon-invoice.svg" alt=""></i>
+                                                    <div class="quick-sts-text">
+                                                        <div class="t">Toplam fatura tutarı</div>
+                                                        <div class="v">360.980 TL</div>
+                                                    </div>
+                                                    <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                        <img src="assets/img/icon/icon-question.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="quick-sts-item">
+                                                    <i><img src="assets/img/icon/icon-money.svg" alt=""></i>
+                                                    <div class="quick-sts-text">
+                                                        <div class="t">Toplam tahsilat</div>
+                                                        <div class="v">444.360.980 TL</div>
+                                                    </div>
+                                                    <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                        <img src="assets/img/icon/icon-question.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="quick-sts-item">
+                                                    <i><img src="assets/img/icon/icon-fiche.svg" alt=""></i>
+                                                    <div class="quick-sts-text">
+                                                        <div class="t">Toplam irsaliye</div>
+                                                        <div class="v">180</div>
+                                                    </div>
+                                                    <div class="quick-tooltip" data-toggle="tooltip" data-placement="right" data-original-title="Lorem ipsum sit dolor amet.">
+                                                        <img src="assets/img/icon/icon-question.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="campaign-slider">
+                                        <div class="slider-banner">
+                                            <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                        </div>
+                                        <div class="slider-banner">
+                                            <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                        </div>
+                                        <div class="slider-banner">
+                                            <img src="assets/img/shared/slider/camp-banner-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="call-to-action-1">
+                                        <div class="cta-icon">
+                                            <i><img src="assets/img/icon/icon-hand-notes.svg" alt=""></i>
+                                        </div>
+                                        <div class="cta-text">
+                                            <div class="t">Hesabını güncelle!</div>
+                                            <div class="v">Daha fazla modüle sahip olabilirsin ya da kontör satın alabilirsin.</div>
+                                        </div>
+                                        <div class="cta-button">
+                                            <a href="#" class="btn b-btn b-btn-primary b-btn-xs">Yeni modül ekle</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="module-box buying-modules">
+                                        <div class="box-title">
+                                            <span>Satın aldığınız modüller</span>
+                                            <a href="#">Tümü</a>
+                                        </div>
+                                        <div class="buying-modules-list">
+                                            <div class="item">
+                                                <figure class="icon">
+                                                    <img src="assets/img/icon/icon-fatura.svg" alt="">
+                                                </figure>
+                                                <div class="title">E-Fatura</div>
+                                                <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="icon">
+                                                    <img src="assets/img/icon/icon-kep.svg" alt="">
+                                                </figure>
+                                                <div class="title">E-Kep</div>
+                                                <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="icon">
+                                                    <img src="assets/img/icon/icon-irsaliye.svg" alt="">
+                                                </figure>
+                                                <div class="title">E-İrsaliye</div>
+                                                <a href="#" class="btn b-btn b-btn-primary b-btn-rds-xxs ms-auto">Aç</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="module-box notes-modules">
+                                        <div class="box-title">
+                                            <span>Notlar-Hatırlatma</span>
+                                            <a href="#">Tümü</a>
+                                        </div>
+                                        <div class="notes-modules-list">
+                                            <a href="#" class="btn b-btn b-btn-third add-note-button">
+                                                <i class="far fa-plus"></i>
+                                                <span>Not-Hatırlatma Ekle</span>
+                                            </a>
+                                            <div class="item">
+                                                <div class="text">
+                                                    <div class="t">Ödeme Planlaması</div>
+                                                    <div class="v">19 Eylül - Boyner Grup ödeme lorem ipsum sit dolor amet...</div>
+                                                </div>
+                                                <a href="#" class="btn b-btn b-btn-third b-btn-rds-xxs ms-auto">Aç</a>
+                                            </div>
+                                            <div class="item">
+                                                <div class="text">
+                                                    <div class="t">Kesilecek Faturalar</div>
+                                                    <div class="v">19 Eylül - Boyner Grup ödeme lorem ipsum sit dolor amet...</div>
+                                                </div>
+                                                <a href="#" class="btn b-btn b-btn-third b-btn-rds-xxs ms-auto">Aç</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="module-box statistics-modules">
+                                        <div class="box-title">
+                                            <span>İstatistikler</span>
+                                            <a href="#">Tümü</a>
+                                        </div>
+                                        <div class="statistics-modules-list">
+                                            <script type="text/javascript">
+                                                google.charts.load('current', {
+                                                    packages: ['corechart', 'bar']
+                                                });
+                                                google.charts.setOnLoadCallback(drawStacked);
+
+                                                function drawStacked() {
+                                                    var data = google.visualization.arrayToDataTable([
+                                                        ['Ayrıntı', 'E-Fatura', 'E-İrsaliye', 'E-Kep'],
+                                                        ['', 1000, 400, 200],
+                                                        ['', 1170, 460, 250],
+                                                        ['', 660, 1120, 300]
+                                                    ]);
+
+                                                    var options = {
+                                                        isStacked: true,
+                                                        chartArea: {
+                                                            width: '100%'
+                                                        },
+                                                        colors: [customTheme.config.color.primary, customTheme.config.color.primary_2, customTheme.config.color.third],
+                                                        vAxis: {
+                                                            textPosition: 'none',
+                                                            gridlines: {
+                                                                count: 0
+                                                            }
+                                                        },
+                                                        hAxis: {
+                                                            textPosition: 'none',
+                                                            gridlines: {
+                                                                count: 0
+                                                            }
+                                                        },
+                                                        legend: {
+                                                            position: 'bottom'
+                                                        }
+                                                    };
+
+                                                    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                                                    chart.draw(data, options);
+
+                                                }
+                                            </script>
+
+                                            <div id="chart_div"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer id="footer">
+
+    </footer>
+</body>
+<script type="text/javascript" src="assets/js/frameworks/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/jquery.mask.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/rateyo.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/slick.min.js"></script>
+<script type="text/javascript" src="assets/js/frameworks/parsley.min.js"></script>
+
+<script type="text/javascript" src="assets/js/theme.js"></script>
+
+</html>
